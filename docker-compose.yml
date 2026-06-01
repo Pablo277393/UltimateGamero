@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:latest
+    container_name: futmanager_db
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: UlytimateGamero
+    ports:
+      - "3309:3306"
+    volumes:
+      - futmanager_data:/var/lib/mysql
+
+volumes:
+  futmanager_data:
