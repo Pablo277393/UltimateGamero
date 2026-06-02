@@ -16,6 +16,7 @@ export const PlayerCard = ({ player }) => {
             <img
                 src={player.imageUrl || "https://placehold.co/400x600/1a1a1a/ffd700?text=Player+Image"}
                 alt={player.name}
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700"
             />
 

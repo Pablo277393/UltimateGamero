@@ -59,6 +59,22 @@ public class TeamService {
         return teamRepository.save(team);
     }
 
+    @Transactional
+    public Team removePlayerFromTeam(Long teamId, Long playerId) {
+        Team team = teamRepository.findById(teamId)
+                .orElseThrow(() -> new ResourceNotFoundException("Team not found"));
+
+        Player player = playerRepository.findById(playerId)
+                .orElseThrow(() -> new ResourceNotFoundException("Player not found"));
+
+        if (!team.getActivePlayers().contains(player)) {
+            throw new IllegalArgumentException("Player is not in the team");
+        }
+
+        team.getActivePlayers().remove(player);
+        return teamRepository.save(team);
+    }
+
     public Team getTeamByUserId(Long userId) {
         return teamRepository.findByUserId(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("Team not found for user: " + userId));

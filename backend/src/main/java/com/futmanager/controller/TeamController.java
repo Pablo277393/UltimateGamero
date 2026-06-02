@@ -26,4 +26,9 @@ public class TeamController {
     public Team addPlayerToTeam(@PathVariable Long teamId, @PathVariable Long playerId) {
         return teamService.addPlayerToTeam(teamId, playerId);
     }
+
+    @DeleteMapping("/{teamId}/players/{playerId}")
+    public Team removePlayerFromTeam(@PathVariable Long teamId, @PathVariable Long playerId) {
+        return teamService.removePlayerFromTeam(teamId, playerId);
+    }
 }

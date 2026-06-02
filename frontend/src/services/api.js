@@ -21,5 +21,6 @@ export const futApi = {
     // Teams
     createTeam: (userId, name) => api.post('/teams', { userId, name }),
     getTeam: (userId) => api.get(`/teams/user/${userId}`),
-    addPlayerToTeam: (teamId, playerId) => api.post(`/teams/${teamId}/players/${playerId}`)
+    addPlayerToTeam: (teamId, playerId) => api.post(`/teams/${teamId}/players/${playerId}`),
+    removePlayerFromTeam: (teamId, playerId) => api.delete(`/teams/${teamId}/players/${playerId}`)
 };
