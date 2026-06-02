@@ -1,22 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '../components/ui/Button';
 import { PlayerCard } from '../components/cards/PlayerCard';
+import { futApi } from '../services/api';
 
 export const Store = () => {
     const [openedPlayers, setOpenedPlayers] = useState(null);
     const [isOpening, setIsOpening] = useState(false);
+    const [user, setUser] = useState(null);
 
-    const handleOpenPack = () => {
+    const fetchUser = async () => {
+        try {
+            const res = await futApi.getUser(1);
+            setUser(res.data);
+        } catch (error) {
+            console.error('Failed to load user', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchUser();
+    }, []);
+
+    const handleOpenPack = async () => {
         setIsOpening(true);
-        // Simulate API call for now
-        setTimeout(() => {
-            setOpenedPlayers([
-                { name: 'MESSI', rating: 94, position: 'RW', pace: 80, dribbling: 96, shooting: 93, defending: 40, passing: 92, physical: 65, imageUrl: 'https://placehold.co/400x600/1a1a1a/ffd700?text=Messi' },
-                { name: 'RONALDO', rating: 93, position: 'ST', pace: 85, dribbling: 88, shooting: 94, defending: 35, passing: 80, physical: 82, imageUrl: 'https://placehold.co/400x600/1a1a1a/ffd700?text=Ronaldo' },
-                { name: 'MBAPPE', rating: 91, position: 'ST', pace: 97, dribbling: 92, shooting: 89, defending: 36, passing: 80, physical: 76, imageUrl: 'https://placehold.co/400x600/1a1a1a/ffd700?text=Mbappe' }
-            ]);
+        try {
+            const response = await futApi.openPack(1);
+            setOpenedPlayers([response.data]); // Expecting 1 player returned directly due to backend change
+            fetchUser();
+        } catch (error) {
+            console.error('Failed to open pack:', error);
+            if (error.response?.data?.message) {
+                alert(error.response.data.message);
+            }
+        } finally {
             setIsOpening(false);
-        }, 2000);
+        }
     };
 
     return (
@@ -41,7 +59,7 @@ export const Store = () => {
                         {isOpening ? (
                             <span className="animate-pulse">OPENING PACK...</span>
                         ) : (
-                            'OPEN PACK (1/10)'
+                            `OPEN PACK (${user?.packsOpenedToday ?? 0}/10)`
                         )}
                     </Button>
                 </div>

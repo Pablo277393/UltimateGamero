@@ -1,12 +1,41 @@
+import { useState, useEffect } from 'react';
 import { PlayerCard } from '../components/cards/PlayerCard';
+import { futApi } from '../services/api';
 
 export const Club = () => {
-    // Dummy collection data
-    const myPlayers = [
-        { name: 'VINICIUS JR', rating: 91, position: 'LW', pace: 95, dribbling: 93, shooting: 86, defending: 34, passing: 83, physical: 72, imageUrl: 'https://placehold.co/400x600/1a1a1a/ffd700?text=Vini+Jr' },
-        { name: 'BELLINGHAM', rating: 90, position: 'CM', pace: 84, dribbling: 88, shooting: 85, defending: 79, passing: 87, physical: 84, imageUrl: 'https://placehold.co/400x600/1a1a1a/ffd700?text=Jude' },
-        { name: 'HAALAND', rating: 92, position: 'ST', pace: 93, dribbling: 82, shooting: 95, defending: 48, passing: 70, physical: 90, imageUrl: 'https://placehold.co/400x600/1a1a1a/ffd700?text=Haaland' }
-    ];
+    const [myCollection, setMyCollection] = useState([]);
+    const [myActiveSquad, setMyActiveSquad] = useState([]);
+    const [teamId, setTeamId] = useState(null);
+
+    useEffect(() => {
+        loadData();
+    }, []);
+
+    const loadData = async () => {
+        try {
+            // Load user 1 collection
+            const userRes = await futApi.getUser(1);
+            setMyCollection(userRes.data?.collection || []);
+
+            // Load user 1 team
+            const teamRes = await futApi.getTeam(1);
+            setTeamId(teamRes.data?.id);
+            setMyActiveSquad(teamRes.data?.activePlayers || []);
+        } catch (error) {
+            console.error("Error loading club data", error);
+        }
+    };
+
+    const handleAddToSquad = async (playerId) => {
+        if (!teamId) return;
+        try {
+            await futApi.addPlayerToTeam(teamId, playerId);
+            await loadData();
+        } catch (error) {
+            console.error("Error adding player to team", error);
+            alert("Could not add player to team.");
+        }
+    };
 
     return (
         <div className="flex flex-col items-center w-full max-w-7xl mx-auto animate-fade-in relative z-10">
@@ -23,7 +52,7 @@ export const Club = () => {
                     <p className="text-3xl font-black text-fut-accent opacity-20 absolute uppercase tracking-widest">Pitch View Demo</p>
 
                     <div className="absolute flex space-x-6 z-20">
-                        {myPlayers.map((p, i) => (
+                        {myActiveSquad.map((p, i) => (
                             <div key={i} className="transform scale-[0.8] hover:scale-95 transition-all duration-300 origin-bottom hover:z-30 cursor-pointer">
                                 <PlayerCard player={p} />
                             </div>
@@ -34,14 +63,14 @@ export const Club = () => {
                 <div className="flex items-center justify-between mb-8">
                     <h2 className="text-3xl font-black text-fut-gold z-10 relative">MY COLLECTION</h2>
                     <span className="text-fut-accent font-bold px-4 py-2 bg-fut-dark rounded-lg border border-fut-gold border-opacity-30 block">
-                        TOTAL ITEMS: <span className="text-fut-gold">3</span>
+                        TOTAL ITEMS: <span className="text-fut-gold">{myCollection.length}</span>
                     </span>
                 </div>
 
                 <div className="flex flex-wrap gap-8 justify-start relative z-10">
                     {/* Collection items */}
-                    {myPlayers.map((p, i) => (
-                        <div key={i} className="transform scale-[0.85] hover:scale-95 transition-all duration-300 origin-top cursor-pointer">
+                    {myCollection.map((p, i) => (
+                        <div key={i} onClick={() => handleAddToSquad(p.id)} className="transform scale-[0.85] hover:scale-95 transition-all duration-300 origin-top cursor-pointer">
                             <PlayerCard player={p} />
                         </div>
                     ))}

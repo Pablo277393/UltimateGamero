@@ -1,0 +1,241 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------------< [0;36mcom.futmanager:backend[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding FutManager Backend 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.3.2:clean[m [1m(default-clean)[m @ [36mbackend[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/pablo/Documentos/Entorno/UltimateGamero/backend/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot-maven-plugin:3.2.5:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mbackend[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mbackend[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mbackend[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;34mINFO[m] Compiling 20 source files with javac [debug release 17] to target/classes
+[[1;34mINFO[m] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mbackend[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/pablo/Documentos/Entorno/UltimateGamero/backend/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36mbackend[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot-maven-plugin:3.2.5:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mbackend[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:3.2.5:run[m [1m(default-cli)[m @ [36mbackend[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-06-01T20:08:32.418+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : Starting BackendApplication using Java 21.0.11 with PID 27383 (/home/pablo/Documentos/Entorno/UltimateGamero/backend/target/classes started by pablo in /home/pablo/Documentos/Entorno/UltimateGamero/backend)
+2026-06-01T20:08:32.419+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-01T20:08:32.439+02:00  INFO 27383 --- [backend] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-01T20:08:32.439+02:00  INFO 27383 --- [backend] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-01T20:08:32.712+02:00  INFO 27383 --- [backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T20:08:32.740+02:00  INFO 27383 --- [backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2026-06-01T20:08:32.985+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8099 (http)
+2026-06-01T20:08:32.992+02:00  INFO 27383 --- [backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T20:08:32.992+02:00  INFO 27383 --- [backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-01T20:08:33.010+02:00  INFO 27383 --- [backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T20:08:33.010+02:00  INFO 27383 --- [backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 571 ms
+2026-06-01T20:08:33.073+02:00  INFO 27383 --- [backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-01T20:08:33.095+02:00  INFO 27383 --- [backend] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-01T20:08:33.107+02:00  INFO 27383 --- [backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-01T20:08:33.210+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T20:08:33.221+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-01T20:08:33.264+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@30939bed
+2026-06-01T20:08:33.265+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-01T20:08:33.277+02:00  WARN 27383 --- [backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-01T20:08:33.682+02:00  INFO 27383 --- [backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    create table players (
+        id bigint not null auto_increment,
+        defending integer,
+        dribbling integer,
+        image_url varchar(255),
+        name varchar(255) not null,
+        pace integer,
+        passing integer,
+        physical integer,
+        position varchar(255) not null,
+        rarity varchar(255) not null,
+        rating integer not null,
+        shooting integer,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table team_players (
+        team_id bigint not null,
+        player_id bigint not null
+    ) engine=InnoDB
+Hibernate: 
+    create table teams (
+        id bigint not null auto_increment,
+        name varchar(255) not null,
+        user_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table user_collection (
+        user_id bigint not null,
+        player_id bigint not null
+    ) engine=InnoDB
+Hibernate: 
+    create table users (
+        id bigint not null auto_increment,
+        email varchar(255) not null,
+        last_pack_opened_date date,
+        packs_opened_today integer not null,
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    alter table if exists teams 
+       drop index if exists UK_go1rp6g0b6kqfrkwj5pyt00w5
+Hibernate: 
+    alter table if exists teams 
+       add constraint UK_go1rp6g0b6kqfrkwj5pyt00w5 unique (user_id)
+Hibernate: 
+    alter table if exists users 
+       drop index if exists UK_6dotkott2kjsp8vw4d0m25fb7
+Hibernate: 
+    alter table if exists users 
+       add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: 
+    alter table if exists users 
+       drop index if exists UK_r43af9ap4edm43mmtq01oddj6
+Hibernate: 
+    alter table if exists users 
+       add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
+Hibernate: 
+    alter table if exists team_players 
+       add constraint FKddxneji5ow8j3171oe6mc2gu0 
+       foreign key (player_id) 
+       references players (id)
+Hibernate: 
+    alter table if exists team_players 
+       add constraint FK3bhsykltbdhsmmb61l2ml12h 
+       foreign key (team_id) 
+       references teams (id)
+Hibernate: 
+    alter table if exists teams 
+       add constraint FKlm88j38y90erf2rum00e85gw8 
+       foreign key (user_id) 
+       references users (id)
+Hibernate: 
+    alter table if exists user_collection 
+       add constraint FKhihh3xbrffggy389kwg9qvpp3 
+       foreign key (player_id) 
+       references players (id)
+Hibernate: 
+    alter table if exists user_collection 
+       add constraint FK6o8039xka2t1u0mqvi3vfci8r 
+       foreign key (user_id) 
+       references users (id)
+2026-06-01T20:08:56.512+02:00  INFO 27383 --- [backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T20:08:56.700+02:00  WARN 27383 --- [backend] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T20:09:03.447+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-06-01T20:09:03.481+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8099 (http) with context path ''
+2026-06-01T20:09:03.486+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : Started BackendApplication in 31.23 seconds (process running for 31.412)
+2026-06-01T20:19:13.424+02:00  INFO 27383 --- [backend] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-01T20:19:13.429+02:00  INFO 27383 --- [backend] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T20:19:13.430+02:00  INFO 27383 --- [backend] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-01T20:19:13.432+02:00  INFO 27383 --- [backend] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-06-01T20:19:13.579+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : Starting BackendApplication using Java 21.0.11 with PID 27383 (/home/pablo/Documentos/Entorno/UltimateGamero/backend/target/classes started by pablo in /home/pablo/Documentos/Entorno/UltimateGamero/backend)
+2026-06-01T20:19:13.579+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-01T20:19:13.640+02:00  INFO 27383 --- [backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T20:19:13.645+02:00  INFO 27383 --- [backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 3 JPA repository interfaces.
+2026-06-01T20:19:13.684+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8099 (http)
+2026-06-01T20:19:13.685+02:00  INFO 27383 --- [backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T20:19:13.685+02:00  INFO 27383 --- [backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-01T20:19:13.688+02:00  INFO 27383 --- [backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T20:19:13.688+02:00  INFO 27383 --- [backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 108 ms
+2026-06-01T20:19:13.703+02:00  INFO 27383 --- [backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-01T20:19:13.704+02:00  INFO 27383 --- [backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-01T20:19:13.706+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T20:19:13.706+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-06-01T20:19:13.708+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.mariadb.jdbc.Connection@7440b5b9
+2026-06-01T20:19:13.708+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-06-01T20:19:13.708+02:00  WARN 27383 --- [backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-01T20:19:13.745+02:00  INFO 27383 --- [backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-01T20:19:13.755+02:00  INFO 27383 --- [backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T20:19:13.797+02:00  WARN 27383 --- [backend] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T20:19:17.907+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-06-01T20:19:17.915+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8099 (http) with context path ''
+2026-06-01T20:19:17.917+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : Started BackendApplication in 4.347 seconds (process running for 645.843)
+2026-06-01T20:19:17.918+02:00  INFO 27383 --- [backend] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-06-01T20:19:35.323+02:00  INFO 27383 --- [backend] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-06-01T20:19:35.326+02:00  INFO 27383 --- [backend] [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T20:19:35.326+02:00  INFO 27383 --- [backend] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-06-01T20:19:35.327+02:00  INFO 27383 --- [backend] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-06-01T20:19:35.369+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : Starting BackendApplication using Java 21.0.11 with PID 27383 (/home/pablo/Documentos/Entorno/UltimateGamero/backend/target/classes started by pablo in /home/pablo/Documentos/Entorno/UltimateGamero/backend)
+2026-06-01T20:19:35.370+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-06-01T20:19:35.429+02:00  INFO 27383 --- [backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-01T20:19:35.433+02:00  INFO 27383 --- [backend] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 3 JPA repository interfaces.
+2026-06-01T20:19:35.471+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8099 (http)
+2026-06-01T20:19:35.471+02:00  INFO 27383 --- [backend] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-01T20:19:35.471+02:00  INFO 27383 --- [backend] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-01T20:19:35.475+02:00  INFO 27383 --- [backend] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-01T20:19:35.475+02:00  INFO 27383 --- [backend] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 105 ms
+2026-06-01T20:19:35.489+02:00  INFO 27383 --- [backend] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-01T20:19:35.490+02:00  INFO 27383 --- [backend] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-01T20:19:35.492+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-01T20:19:35.492+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-06-01T20:19:35.494+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.mariadb.jdbc.Connection@d114663
+2026-06-01T20:19:35.494+02:00  INFO 27383 --- [backend] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-06-01T20:19:35.494+02:00  WARN 27383 --- [backend] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-01T20:19:35.529+02:00  INFO 27383 --- [backend] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-01T20:19:35.534+02:00  INFO 27383 --- [backend] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-01T20:19:35.575+02:00  WARN 27383 --- [backend] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-01T20:19:38.359+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-06-01T20:19:38.365+02:00  INFO 27383 --- [backend] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8099 (http) with context path ''
+2026-06-01T20:19:38.367+02:00  INFO 27383 --- [backend] [  restartedMain] com.futmanager.BackendApplication        : Started BackendApplication in 3.007 seconds (process running for 666.293)
+2026-06-01T20:19:38.367+02:00  INFO 27383 --- [backend] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  14:39 min
+[[1;34mINFO[m] Finished at: 2026-06-01T20:23:10+02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.springframework.boot:spring-boot-maven-plugin:3.2.5:run[m [1m(default-cli)[m on project [36mbackend[m: [1;31mProcess terminated with exit code: 137[m -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

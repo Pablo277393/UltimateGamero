@@ -24,7 +24,7 @@ public class PackService {
     private final Random random = new Random();
 
     @Transactional
-    public List<Player> openPack(Long userId) {
+    public Player openPack(Long userId) {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
 
@@ -48,17 +48,14 @@ public class PackService {
             throw new ResourceNotFoundException("No players available. Please populate the database.");
         }
 
-        List<Player> packPlayers = new ArrayList<>();
-        for (int i = 0; i < 3; i++) { // 3 players per pack
-            packPlayers.add(allPlayers.get(random.nextInt(allPlayers.size())));
-        }
+        Player player = allPlayers.get(random.nextInt(allPlayers.size()));
 
         // Add to user's collection
-        user.getCollection().addAll(packPlayers);
+        user.getCollection().add(player);
         user.setPacksOpenedToday(user.getPacksOpenedToday() + 1);
 
         userRepository.save(user);
 
-        return packPlayers;
+        return player;
     }
 }

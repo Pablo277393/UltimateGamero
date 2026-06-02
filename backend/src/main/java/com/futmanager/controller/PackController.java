@@ -14,7 +14,7 @@ public class PackController {
     private final PackService packService;
 
     @PostMapping("/open/{userId}")
-    public List<Player> openPack(@PathVariable Long userId) {
+    public Player openPack(@PathVariable Long userId) {
         return packService.openPack(userId);
     }
 }
